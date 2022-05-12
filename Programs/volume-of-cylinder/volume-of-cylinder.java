@@ -22,7 +22,7 @@ public class App {
         }
         
         System.out.println("Please input radius of the cylinder");
-        while(height == 0){
+        while(radius == 0){
             try{
                 radius = getInput.nextDouble();
             }catch(InputMismatchException e){
