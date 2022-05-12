@@ -7,32 +7,29 @@ public class volumeofcylinder {
         volume = height * Math.pow(radius, 2) * Math.PI;
         return volume;
     }
-    public static void main(String[] args) throws Exception {
-        double volume, height = 0, radius = 0;
+    public static double getUsersDouble(String message){
         Scanner getInput = new Scanner(System.in);
-        System.out.println("Please input height of the cylinder");
-        while(height == 0){
+        System.out.println(message);
+        double variable = 0;
+        while(variable == 0){
             try{
-                height = getInput.nextDouble();
+                variable = getInput.nextDouble();
             }catch(InputMismatchException e){
-                System.out.println("Something went wrong, try again");
-                height = 0;
+                System.out.println("That's not double or int. Try again");
+                variable = 0;
                 getInput.nextLine();
             }
         }
-        
-        System.out.println("Please input radius of the cylinder");
-        while(radius == 0){
-            try{
-                radius = getInput.nextDouble();
-            }catch(InputMismatchException e){
-                System.out.println("Something went wrong, try again");
-                radius = 0;
-                getInput.nextLine();
-            }
-        }
+        return variable;
+    }
+    public static void main(String[] args) throws Exception {
+        double volume, height, radius;
+
+        height = getUsersDouble("Please input height");
+        radius = getUsersDouble("Please input radius");
+
         volume = cylinderVolume(height, radius);
         System.out.println("The volume of the cylinder is: "+volume);
-        
+
     }
 }
