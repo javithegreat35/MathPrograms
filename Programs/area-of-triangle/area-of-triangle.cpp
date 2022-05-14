@@ -1,4 +1,4 @@
-// Write a programme to find area of triangle
+// Write a program to find area of triangle
 #include <iostream>
 #include <cmath>
 using namespace std;

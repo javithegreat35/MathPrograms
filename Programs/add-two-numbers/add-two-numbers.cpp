@@ -1,4 +1,4 @@
-// Write a programme to add two numbers
+// Write a program to add two numbers
 #include <bits/stdc++.h>
 using namespace std;
 
